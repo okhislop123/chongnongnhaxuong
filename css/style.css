@@ -206,6 +206,10 @@ nav.navbar.xs-none .container .collapse form button {
      object-fit: cover;
 }
 
+.test {
+  background: red;
+}
+
 .gallery .container .gallery__content .gallery__info .gallery__item h1 {
   font-family: ggsanr;
   font-size: 16px;
