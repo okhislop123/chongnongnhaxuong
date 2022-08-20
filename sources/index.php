@@ -6,9 +6,8 @@ $product__link = $d->simple_fetch("select * from #_category where id = 1291");
 $project__title = $d->simple_fetch("select * from #_category where id = 1303");
 $video__item = $d->simple_fetch("select * from #_category where id = 1304");
 $project__list = $d->o_fet("select * from #_tintuc where id_loai = 1303 and noi_bat = 1 order by so_thu_tu asc, id desc limit 0,4");
-$a = 1;
 ?>
-<div class="test"><?=$a?></div>
+
 <div class="uk-section-default uk-section uk-padding-remove-vertical uk-flex uk-flex-middle" uk-height-viewport="offset-top: true;" style="min-height: calc(100vh - 145.594px);">
     <div class="uk-width-1-1">
         <div class="tm-grid-expand uk-child-width-1-1 uk-margin-remove-vertical uk-grid uk-grid-stack" uk-grid>
