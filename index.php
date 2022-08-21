@@ -72,12 +72,6 @@ include _source . "xl_dangnhap.php";
 var myaudio = document.getElementById("player").autoplay = true;
 </script> -->
 
-
-
-	<?php if ($_SERVER["SERVER_NAME"] != 'localhost') {
-		include 'limit.php';
-	} ?>
-	
 	<?php include _source . "header.php"; ?>
 	<?php include _source . $source . ".php"; ?>
 	<?php include _source . "footer.php"; ?>
