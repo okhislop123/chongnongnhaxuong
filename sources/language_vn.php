@@ -13,6 +13,7 @@
 	define('_support_online','Hỗ trợ trực tuyến');
 	define('_product_discovery','Khám phá sản phẩm');
 	define('_email','email');
+	define('_enter_content_search','Nhập nội dung tìm kiếm');
 
 	define('_register_email','Đăng ký nhận email');
 	define('_type_email','Vui lòng nhập Email!');
@@ -22,7 +23,6 @@
 	define('_baivietlienquan','Bài viết liên quan');
 	define('_updating','Nội dung đang được cập nhật');
 	define('_noidunglienhe','Thông tin liên hệ');
-	define('_hoten','Họ tên');
 	define('_typehoten','Vui lòng nhập họ tên');
 	define('_sodienthoai','Số điện thoại');
 	define('_typesodienthoai','Vui lòng nhập số điện thoại');
