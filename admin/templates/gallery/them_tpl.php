@@ -30,7 +30,7 @@
 							</td>
 							<td class="td_right">
 								<?php if($items[0]['favicon'] <> ''){ ?>
-								<img src="../img_data/icon/<?php echo @$items[0]['favicon']?>"  width="50" alt="NO PHOTO" />
+								<img src="../img_data/images/<?php echo @$items[0]['favicon']?>"  width="50" alt="NO PHOTO" />
 								<?php } ?>
 							</td>
 						</tr>
@@ -48,7 +48,7 @@
 							</td>
 							<td class="td_right">
 								<?php if($items[0]['ic_share'] <> ''){ ?>
-								<img src="../img_data/icon/<?php echo @$items[0]['ic_share']?>"  width="50" alt="NO PHOTO" />
+								<img src="../img_data/images/<?php echo @$items[0]['ic_share']?>"  width="50" alt="NO PHOTO" />
 								<?php } ?>
 							</td>
 						</tr>
