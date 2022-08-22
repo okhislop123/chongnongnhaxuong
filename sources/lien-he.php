@@ -147,7 +147,7 @@ $loai = $d->simple_fetch("select * from #_category where hien_thi = 1 and alias_
                 <form id="form-contact" method="post">
                     <div class="col-12">
                         <div class="form-group">
-                            <input type="text" id="ho_ten" required name="ho_ten" class="form-control" placeholder="Name (*)">
+                            <input type="text" id="ho_ten" required name="ho_ten" class="form-control" placeholder="<?= _hoten ?> (*)">
                         </div>
                         <div class="form-group">
                             <input type="text" id="so_dien_thoai" required name="so_dien_thoai" class="form-control" placeholder="<?= _sodienthoai ?>(*)">
@@ -156,7 +156,7 @@ $loai = $d->simple_fetch("select * from #_category where hien_thi = 1 and alias_
                         <input type="text" id="dia_chi" name="dia_chi" class="form-control" placeholder="Address">
                     </div> -->
                         <div class="form-group">
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Email ">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="<?= _email ?> ">
                         </div>
                         <!-- <div class="form-group">
                         <input type="text" id="so_dien_thoai" required name="so_dien_thoai" class="form-control" placeholder="Phone  (*)">
@@ -164,12 +164,12 @@ $loai = $d->simple_fetch("select * from #_category where hien_thi = 1 and alias_
                     </div>
                     <div class="col-12">
                         <div class="textarea-message form-group">
-                            <textarea class="form-control" name="noi_dung" placeholder="<?= ($lang == 'vn') ? 'Content ' : 'Content ' ?>" rows="6"></textarea>
+                            <textarea class="form-control" name="noi_dung" placeholder="<?= _content ?>" rows="6"></textarea>
                         </div>
                         <div class="form-group item-captcha">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <input type="text" required class="form-control" placeholder="<?= ($lang == 'vn') ? 'Enter the security code' : 'Enter the security code' ?>" id="captcha" name="captcha" style="background: url(./sources/capchaimage.php) center right no-repeat">
+                                    <input type="text" required class="form-control" placeholder="<?= _captcha ?>" id="captcha" name="captcha" style="background: url(./sources/capchaimage.php) center right no-repeat">
                                 </div>
                                 <div class="col-sm-12">
                                     <button class="form-control btn btn-success btn-send-contact " style="margin-top:15px" name="sub_email" type="submit"><?= _send ?>

@@ -78,7 +78,7 @@ $bg = $d->getTemplates(60);
                                                         <?= $d->catchuoi_new(strip_tags($item['mo_ta_' . $lang]), 350) ?>
                                                     </div>
                                                     <div class="text-right">
-                                                        <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html">Xem chi tiết</a>
+                                                        <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html"><?=_viewmore?></a>
                                                     </div>
 
                                                 </div>

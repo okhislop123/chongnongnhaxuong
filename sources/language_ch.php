@@ -16,6 +16,7 @@
 	define('_email','Eメール');
 	define('_trangchu','家');
 	define('_contac_us','お問い合わせ');
+	define('_enter_content_search','検索テキストを入力してください');
 
 	define('_product_discovery','製品の発見');
 	define('_ngaydang','日投稿');

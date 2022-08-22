@@ -10,6 +10,7 @@
 	define('_linkwebsite','Connect website');
 	define('_Category_pro','Products Category');
 	define('_conect_us','Connect with us');
+	define('_enter_content_search','Enter search text');
 	define('_support_online','Support Online');
 	define('_register_email','Register email');
 	define('_type_email','Please enter email!');
@@ -97,7 +98,6 @@
 	define('_nhapmatkhau','Enter the password');
 	define('_nhaplaimatkhau','Enter the password');
 	define('_matkhaukhongtrungkhop','Passwords do not match');
-	define('_hoten','Full name');
 	define('_nhaphoten','Full name');
 	define('_nhapemail','Enter email');
 	define('_emaildatontai','Email is exist');
