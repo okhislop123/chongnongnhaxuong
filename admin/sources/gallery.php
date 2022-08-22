@@ -90,18 +90,18 @@ function luudulieu(){
 			$data['picture'] = $file;
 		}
 
-		if(@$file_1 = $d->upload_image("file_1", '', '../img_data/icon/',$file_name)){
+		if(@$file_1 = $d->upload_image("file_1", '', '../img_data/images/',$file_name)){
 			$hinhanh_1 = $d->o_fet("select * from #_gallery where id = '".$id."'");
 			foreach ($hinhanh_1 as $ha1) {
-				@unlink('../img_data/icon/'.$ha1['favicon']);
+				@unlink('../img_data/images/'.$ha1['favicon']);
 			}
 			$data['favicon'] = $file_1;
 		}
 
-		if(@$file_2 = $d->upload_image("file_2", '', '../img_data/icon/',$file_name)){
+		if(@$file_2 = $d->upload_image("file_2", '', '../img_data/images/',$file_name)){
 			$hinhanh_2 = $d->o_fet("select * from #_gallery where id = '".$id."'");
 			foreach ($hinhanh_2 as $ha2) {
-				@unlink('../img_data/icon/'.$ha2['ic_share']);
+				@unlink('../img_data/images/'.$ha2['ic_share']);
 			}
 			$data['ic_share'] = $file_2;
 		}
@@ -132,11 +132,11 @@ function luudulieu(){
 		if(@$file = $d->upload_image("file", '', '../img_data/images/',$file_name)){			
 			$data['picture'] = $file;
 		}
-		if(@$file_1 = $d->upload_image("file_1", '', '../img_data/icon/',$file_name)){			
+		if(@$file_1 = $d->upload_image("file_1", '', '../img_data/images/',$file_name)){			
 			$data['favicon'] = $file_1;
 		}
 
-		if(@$file_2 = $d->upload_image("file_1", '', '../img_data/icon/',$file_name)){			
+		if(@$file_2 = $d->upload_image("file_1", '', '../img_data/images/',$file_name)){			
 			$data['ic_share'] = $file_2;
 		}
 
