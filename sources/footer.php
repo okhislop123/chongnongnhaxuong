@@ -16,7 +16,7 @@ $listchamsoc = $d->o_fet("select * from #_category where id_loai=1278 and hien_t
 $thongtinft = $d->simple_fetch("select * from #_thongtin limit 0,1");
 $hotro = $d->simple_fetch("select * from #_hotro limit 0,1");
 $category_ft = $d->simple_fetch("select * from #_category where id = 1305");
-$project__list = $d->o_fet("select * from #_tintuc where id_loai = 1305 and noi_bat = 1 order by so_thu_tu asc, id desc limit 0,10");
+$project__list = $nav  = $d->o_fet("select * from #_category where tieu_bieu=1 and hien_thi=1  order by so_thu_tu asc, id desc");
 
 ?>
 <footer class="<?= $com = '' ? 'home' : 'nothome' ?>">
@@ -56,7 +56,7 @@ $project__list = $d->o_fet("select * from #_tintuc where id_loai = 1305 and noi_
             <div class="col-md-3 col-sm-6 ">
                 <h4 class="title-f"><?= $category_ft["ten_" . $lang] ?></h4>
                 <ul class="ftmenu">
-                    <li><a href="<?= URLPATH ?>"><?= _trangchu ?></a></li>
+                    <!-- <li><a href="<?= URLPATH ?>"><?= _trangchu ?></a></li> -->
                     <?php foreach ($project__list as $key => $item) { ?>
                         <li><a href="<?= URLPATH . $item['alias_' . $lang] . '.html' ?>"><?= $item['ten_' . $lang] ?></a></li>
                     <?php } ?>
