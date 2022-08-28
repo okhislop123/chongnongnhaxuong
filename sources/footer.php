@@ -21,7 +21,7 @@ $project__list = $nav  = $d->o_fet("select * from #_category where tieu_bieu=1 a
 ?>
 <footer class="<?= $com = '' ? 'home' : 'nothome' ?>">
 
-    <div class="container__item">
+    <div class="container__item_2">
         <div class="row">
             <div class="col-xs-12">
                 <div class="logo__ft">
@@ -68,6 +68,7 @@ $project__list = $nav  = $d->o_fet("select * from #_category where tieu_bieu=1 a
                 <form action="" id="frm_send">
                     <input type="text" placeholder="<?= _hoten ?> *" id="ft_name_ip">
                     <input type="text" placeholder="<?= _email ?> *" id="ft_email_ip">
+                    <input type="text" placeholder="<?= _sodienthoai ?> *" id="ft_phone_ip">
                     <textarea placeholder="<?= _content ?>" name="" id="ft_ms_ip" cols="30" rows="10"></textarea>
                     <button type="button"><?= _send ?></button>
                 </form>

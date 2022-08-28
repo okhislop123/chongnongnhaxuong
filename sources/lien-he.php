@@ -16,7 +16,7 @@ if (isset($_POST['sub_email'])) {
         $data['email'] = addslashes($_POST['email']);
         $data['sdt'] = addslashes($_POST['so_dien_thoai']);
         $data['noi_dung'] = addslashes($_POST['noi_dung']);
-        $data['dia_chi'] = addslashes($_POST['dia_chi']);
+        // $data['dia_chi'] = addslashes($_POST['dia_chi']);
         $data['ngay_hoi'] = date('d-m-Y H:i:s');
         $data['trang_thai'] = '0';
         $data['tieu_de'] = "Liên hệ";
