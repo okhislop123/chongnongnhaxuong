@@ -25,7 +25,7 @@ if (isset($_POST['sub_email'])) {
         $noidung = "<div style='margin-bottom:5px;'>Bạn nhận được tin nhắn từ website: " . URLPATH . " : </div>";
         $noidung .= "<div style='margin-bottom:5px;'>Thông tin: </div>";
         $noidung .= "<div style='margin-bottom:5px;'>Họ tên: " . $_POST['ho_ten'] . "</div>";
-        $noidung .= "<div style='margin-bottom:5px;'>Địa chỉ: " . $_POST['dia_chi'] . "</div>";
+        // $noidung .= "<div style='margin-bottom:5px;'>Địa chỉ: " . $_POST['dia_chi'] . "</div>";
         $noidung .= "<div style='margin-bottom:5px;'>Số điện thoại: " . $_POST['so_dien_thoai'] . "</div>";
         $noidung .= "<div style='margin-bottom:5px;'>Email: " . $_POST['mail'] . "</div>";
         // $noidung .= "<div style='margin-bottom:5px;'>Tiêu đề: ".$_POST['tieu_de']."</div>";
