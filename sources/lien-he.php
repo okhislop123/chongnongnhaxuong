@@ -8,9 +8,9 @@ $textfooter = $d->getTemplates(53);
 
 
 if (isset($_POST['sub_email'])) {
-    $chuoi1 = strtolower($_SESSION['captcha_code']);
-    $chuoi2 = strtolower($_POST['captcha']);
-    if ($chuoi1 == $chuoi2) {
+    // $chuoi1 = strtolower($_SESSION['captcha_code']);
+    // $chuoi2 = strtolower($_POST['captcha']);
+    // if ($chuoi1 == $chuoi2) {
         $d->reset();
         $data['ho_ten'] = addslashes($_POST['ho_ten']);
         $data['email'] = addslashes($_POST['email']);
@@ -40,9 +40,10 @@ if (isset($_POST['sub_email'])) {
         } else {
             $d->alert("Error!");
         }
-    } else {
-        $d->alert("Security code is incorrect");
-    }
+    // } 
+    // else {
+    //     $d->alert("Security code is incorrect");
+    // }
 }
 $dulieu = $d->getTemplates(10);
 $bg = $d->getTemplates(60);
@@ -162,7 +163,7 @@ $loai = $d->simple_fetch("select * from #_category where hien_thi = 1 and alias_
                         <input type="text" id="so_dien_thoai" required name="so_dien_thoai" class="form-control" placeholder="Phone  (*)">
                     </div> -->
                     </div>
-                    <div class="col-12">
+                    <!-- <div class="col-12">
                         <div class="textarea-message form-group">
                             <textarea class="form-control" name="noi_dung" placeholder="<?= _content ?>" rows="6"></textarea>
                         </div>
@@ -179,7 +180,7 @@ $loai = $d->simple_fetch("select * from #_category where hien_thi = 1 and alias_
                             </div>
                         </div>
 
-                    </div>
+                    </div> -->
                 </form>
             </div>
 
