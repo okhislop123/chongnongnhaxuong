@@ -98,9 +98,10 @@ $bg = $d->getTemplates(60);
                     </div>
                 <?php } else {
                     $loai2 = $d->o_fet("select * from #_category where  id_loai = " . $loai["id"] . " order by so_thu_tu asc, id desc");
-                    print_r($loai2);
                 ?>
-                    <?php if (!count($loai2)) { ?>
+                    <?php if (count($loai2)) { ?>
+                        aaaa
+                    <?php  } else { ?>
                         <div class="item__cs__ba">
                             <div class="container__item__4">
                                 <?php foreach ($tintuc2  as $i => $item) {
@@ -140,8 +141,6 @@ $bg = $d->getTemplates(60);
                         <div class="pagination-page">
                             <?php echo @$phantrang['paging'] ?>
                         </div>
-                    <?php  } else { ?>
-                       abc
                     <?php } ?>
                 <?php } ?>
             <?php } ?>
