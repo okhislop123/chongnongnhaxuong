@@ -100,7 +100,15 @@ $bg = $d->getTemplates(60);
                     $loai2 = $d->o_fet("select * from #_category where  id_loai = " . $loai["id"] . " order by so_thu_tu asc, id desc");
                 ?>
                     <?php if (count($loai2)) { ?>
-                        aaaa
+                        <div class="container__item">
+                            <div class="title_menu_priod row">
+                                <div class="tilo">
+                                    <?php foreach ($loai2 as $key => $item) { ?>
+                                        <div onclick="changeMenu(this)" data-id="<?= $item['id'] ?>" class="item-menu-prm2 <?= !$key ? "active" : "" ?>"><?= $item['ten_' . $lang] ?></div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
                     <?php  } else { ?>
                         <div class="item__cs__ba">
                             <div class="container__item__4">
