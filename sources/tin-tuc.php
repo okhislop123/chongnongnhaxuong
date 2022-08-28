@@ -45,44 +45,87 @@ $bg = $d->getTemplates(60);
         <div class="col-md-12 col-sm-12">
 
             <div class="clearfix"></div>
-            <?php if (count($tintuc) == "") { ?>
-                <div class="chitiettin">
-                    <?= $loai['noi_dung_' . $lang] ?>
+
+            <?php if (!$loai['menu']) { ?>
+                <div class="item__cs__a">
+                    <div class="container__item__3">
+                        <?php foreach ($tintuc2  as $i => $item) {
+                        ?>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="content2ll">
+                                    <div class="row itemdetailnew3">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="img-tintuc">
+                                                <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html?lan=<?= $lang ?>" title="<?= $item['ten_' . $lang] ?>">
+                                                    <img src="<?= URLPATH ?>thumb.php?src=<?= URLPATH ?>img_data/images/<?= $item['hinh_anh'] ?>&w=730&h=400" alt="<?= $item['ten_' . $lang] ?>" onerror="this.src='<?= URLPATH ?>templates/error/error.jpg';">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="noidung-tt">
+                                                <h3><a href="<?= URLPATH . $item['alias_' . $lang] ?>.html?lan=<?= $lang ?>" title="$item['ten_'.$lang] ?>"><?= $item['ten_' . $lang] ?></a></h3>
+                                                <div class="mota">
+                                                    <?= $d->catchuoi_new(strip_tags($item['mo_ta_' . $lang]), 350) ?>
+                                                </div>
+                                                <div class="text-right">
+                                                    <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html"><?= _viewmore ?></a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        <?php } ?>
+                    </div>
                 </div>
-            <?php } elseif (count($tintuc) == 1) { ?>
-                <div class="chitiettin">
-                    <?= $tintuc[0]['noi_dung_' . $lang] ?>
+
+                <div class="pagination-page">
+                    <?php echo @$phantrang['paging'] ?>
                 </div>
             <?php } else {
-
+                $loai2 = $d->o_fet("select * from #_category where  id_loai = " . $loai["id"] . " order by so_thu_tu asc, id desc");
             ?>
-                <?php if (!$loai['menu']) { ?>
-                    <div class="item__cs__a">
-                        <div class="container__item__3">
+                <?php if (count($loai2)) { ?>
+                    <div class="container__item">
+                        <div class="title_menu_priod row">
+                            <div class="tilo">
+                                <?php foreach ($loai2 as $key => $item) { ?>
+                                    <div onclick="changeMenu(this)" data-id="<?= $item['id'] ?>" class="item-menu-prm2 <?= !$key ? "active" : "" ?>"><?= $item['ten_' . $lang] ?></div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php  } else { ?>
+                    <div class="item__cs__ba">
+                        <div class="container__item__4">
                             <?php foreach ($tintuc2  as $i => $item) {
                             ?>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="content2ll">
-                                        <div class="row itemdetailnew3">
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <div class="img-tintuc">
+                                <div class="col-item_0">
+                                    <div class="content2l2l">
+                                        <div class=" itemdetailnew5">
+                                            <div class="col-12">
+                                                <div class="img-tintuc_2">
                                                     <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html?lan=<?= $lang ?>" title="<?= $item['ten_' . $lang] ?>">
                                                         <img src="<?= URLPATH ?>thumb.php?src=<?= URLPATH ?>img_data/images/<?= $item['hinh_anh'] ?>&w=730&h=400" alt="<?= $item['ten_' . $lang] ?>" onerror="this.src='<?= URLPATH ?>templates/error/error.jpg';">
                                                     </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <div class="noidung-tt">
-                                                    <h3><a href="<?= URLPATH . $item['alias_' . $lang] ?>.html?lan=<?= $lang ?>" title="$item['ten_'.$lang] ?>"><?= $item['ten_' . $lang] ?></a></h3>
-                                                    <div class="mota">
-                                                        <?= $d->catchuoi_new(strip_tags($item['mo_ta_' . $lang]), 350) ?>
-                                                    </div>
-                                                    <div class="text-right">
-                                                        <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html"><?= _viewmore ?></a>
+                                                    <div class="mota__ctv3">
+                                                        <div class="groupvxa">
+                                                            <h3 style="margin: 0;color:orange"><a style="color: orange;" href="<?= URLPATH . $item['alias_' . $lang] ?>.html?lan=<?= $lang ?>" title="$item['ten_'.$lang] ?>"><?= $item['ten_' . $lang] ?></a></h3>
+
+                                                            <img src="<?= URLPATH . 'templates/images/proj-line.png' ?>" alt="line">
+
+
+                                                        </div>
+
                                                     </div>
 
                                                 </div>
                                             </div>
+
                                         </div>
 
                                     </div>
@@ -96,60 +139,6 @@ $bg = $d->getTemplates(60);
                     <div class="pagination-page">
                         <?php echo @$phantrang['paging'] ?>
                     </div>
-                <?php } else {
-                    $loai2 = $d->o_fet("select * from #_category where  id_loai = " . $loai["id"] . " order by so_thu_tu asc, id desc");
-                ?>
-                    <?php if (count($loai2)) { ?>
-                        <div class="container__item">
-                            <div class="title_menu_priod row">
-                                <div class="tilo">
-                                    <?php foreach ($loai2 as $key => $item) { ?>
-                                        <div onclick="changeMenu(this)" data-id="<?= $item['id'] ?>" class="item-menu-prm2 <?= !$key ? "active" : "" ?>"><?= $item['ten_' . $lang] ?></div>
-                                    <?php } ?>
-                                </div>
-                            </div>
-                        </div>
-                    <?php  } else { ?>
-                        <div class="item__cs__ba">
-                            <div class="container__item__4">
-                                <?php foreach ($tintuc2  as $i => $item) {
-                                ?>
-                                    <div class="col-item_0">
-                                        <div class="content2l2l">
-                                            <div class=" itemdetailnew5">
-                                                <div class="col-12">
-                                                    <div class="img-tintuc_2">
-                                                        <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html?lan=<?= $lang ?>" title="<?= $item['ten_' . $lang] ?>">
-                                                            <img src="<?= URLPATH ?>thumb.php?src=<?= URLPATH ?>img_data/images/<?= $item['hinh_anh'] ?>&w=730&h=400" alt="<?= $item['ten_' . $lang] ?>" onerror="this.src='<?= URLPATH ?>templates/error/error.jpg';">
-                                                        </a>
-                                                        <div class="mota__ctv3">
-                                                            <div class="groupvxa">
-                                                                <h3 style="margin: 0;color:orange"><a style="color: orange;" href="<?= URLPATH . $item['alias_' . $lang] ?>.html?lan=<?= $lang ?>" title="$item['ten_'.$lang] ?>"><?= $item['ten_' . $lang] ?></a></h3>
-
-                                                                <img src="<?= URLPATH . 'templates/images/proj-line.png' ?>" alt="line">
-
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                <?php } ?>
-                            </div>
-                        </div>
-
-                        <div class="pagination-page">
-                            <?php echo @$phantrang['paging'] ?>
-                        </div>
-                    <?php } ?>
                 <?php } ?>
             <?php } ?>
         </div>
