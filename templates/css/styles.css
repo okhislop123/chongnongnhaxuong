@@ -5084,6 +5084,7 @@ section.project {
   transition: 0.8s;
   opacity: 0;
   visibility: hidden;
+  text-align: center;
 }
 
 .project__side__right .content .item img {
