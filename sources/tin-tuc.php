@@ -98,6 +98,7 @@ $bg = $d->getTemplates(60);
                     </div>
                 <?php } else {
                     $loai2 = $d->o_fet("select * from #_category where  id_loai = " . $loai["id"] . " order by so_thu_tu asc, id desc");
+                    print_r($loai2);
                 ?>
                     <?php if (!count($loai2)) { ?>
                         <div class="item__cs__ba">
