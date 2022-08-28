@@ -5379,7 +5379,8 @@ h3.prodcut-name {
 }
 
 .mota {
-  font-family: svn;
+  font-family: 'Roboto';
+  font-size: 14px;
 }
 
 .noidung-tt > div > a {
@@ -5449,7 +5450,7 @@ h3.prodcut-name {
   border: 1px solid #ccc;
 }
 .noidung-tt h3 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .noidung-tt > div > a {
