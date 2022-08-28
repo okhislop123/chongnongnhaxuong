@@ -39,7 +39,7 @@ $bg = $d->getTemplates(60);
 </div>
 <br><br>
 
-<?php if ($loai['id'] != 1299) { ?>
+<?php if ($loai['menu'] != 1) { ?>
 
     <?php if (count($loai1)) { ?>
         <div class="container__item__3">
