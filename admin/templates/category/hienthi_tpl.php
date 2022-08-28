@@ -70,7 +70,7 @@
 				for ($i = 0; $i < $count; $i++) { ?>
 					<tr>
 						<td>
-							<?php if ($items[$i]['id'] != 1288 && $items[$i]['id'] != 1291 && $items[$i]['id'] != 1296 && $items[$i]['id'] != 1309 && $items[$i]['id'] != 1300 && $items[$i]['id'] != 1297 && $items[$i]['id'] != 1301 && $items[$i]['id'] != 1130 && $items[$i]['id'] != 1302 && $items[$i]['id'] != 1304 && $items[$i]['id'] != 1305 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631) { ?>
+							<?php if ($items[$i]['id'] != 1288 && $items[$i]['id'] != 1291 && $items[$i]['id'] != 1296 && $items[$i]['id'] != 1309 && $items[$i]['id'] != 1300 && $items[$i]['id'] != 1297 && $items[$i]['id'] != 1301 && $items[$i]['id'] != 1130 && $items[$i]['id'] != 1302 && $items[$i]['id'] != 1304 && $items[$i]['id'] != 1305 && $items[$i]['id'] != 1303 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631) { ?>
 								<input class="chk_box" type="checkbox" name="chk_child[]" value="<?= $items[$i]['id'] ?>">
 							<?php } ?>
 						</td>
@@ -164,7 +164,7 @@
 
 								<a href="index.php?p=category&a=edit&id=<?= $child_items[$j]['id'] ?>&page=<?= @$_GET['page'] ?>" class="text-danger" title="Sửa"><i class="glyphicon glyphicon-edit"></i></a>&nbsp;&nbsp;&nbsp;
 
-								<?php if ($items[$i]['id'] != 1288 && $items[$i]['id'] != 1291 && $items[$i]['id'] != 1296 && $items[$i]['id'] != 1309 && $items[$i]['id'] != 1300 && $items[$i]['id'] != 1297 && $items[$i]['id'] != 1301 && $items[$i]['id'] != 1130 && $items[$i]['id'] != 1302 && $items[$i]['id'] != 1304 && $items[$i]['id'] != 1305 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631) { ?>
+								<?php if ($items[$i]['id'] != 1288 && $items[$i]['id'] != 1291 && $items[$i]['id'] != 1296 && $items[$i]['id'] != 1309 && $items[$i]['id'] != 1300 && $items[$i]['id'] != 1297 && $items[$i]['id'] != 1301 && $items[$i]['id'] != 1130 && $items[$i]['id'] != 1302 && $items[$i]['id'] != 1304 && $items[$i]['id'] != 1305 && $items[$i]['id'] != 1303 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631) { ?>
 									<a href="index.php?p=category&a=delete&id=<?= $child_items[$j]['id'] ?>&page=<?= @$_GET['page'] ?>" onClick="if(!confirm('Xác nhận xóa?')) return false;" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
 								<?php } ?>
 							</td>
@@ -177,7 +177,9 @@
 						?>
 							<tr>
 								<td>
-									<input type="checkbox" class="chk_box" name="chk_child[]" value="<?= $child_items_2[$k]['id'] ?>">
+									<?php if ($items[$i]['id'] != 1299 && $items[$i]['id'] != 1291 && $items[$i]['id'] != 1296 && $items[$i]['id'] != 1309 && $items[$i]['id'] != 1300 && $items[$i]['id'] != 1297 && $items[$i]['id'] != 1301 && $items[$i]['id'] != 1130 && $items[$i]['id'] != 1302 && $items[$i]['id'] != 1304 && $items[$i]['id'] != 1305 && $items[$i]['id'] != 1303 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631) { ?>
+										<input type="checkbox" class="chk_box" name="chk_child[]" value="<?= $child_items_2[$k]['id'] ?>">
+									<?php } ?>
 								</td>
 								<td>
 									<input type="number" value="<?= $child_items_2[$k]['so_thu_tu'] ?>" class="a_stt" data-table="#_category" data-col="so_thu_tu" data-id="<?= $child_items_2[$k]['id'] ?>" />
@@ -213,7 +215,9 @@
 								<td>
 
 									<a href="index.php?p=category&a=edit&id=<?= $child_items_2[$k]['id'] ?>&page=<?= @$_GET['page'] ?>" class="text-danger" title="Sửa"><i class="glyphicon glyphicon-edit"></i></a>&nbsp;&nbsp;&nbsp;
-									<a href="index.php?p=category&a=delete&id=<?= $child_items_2[$k]['id'] ?>&page=<?= @$_GET['page'] ?>" onClick="if(!confirm('Xác nhận xóa?')) return false;" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
+									<?php if ($items[$i]['id'] != 1299 && $items[$i]['id'] != 1291 && $items[$i]['id'] != 1296 && $items[$i]['id'] != 1309 && $items[$i]['id'] != 1300 && $items[$i]['id'] != 1297 && $items[$i]['id'] != 1301 && $items[$i]['id'] != 1130 && $items[$i]['id'] != 1302 && $items[$i]['id'] != 1304 && $items[$i]['id'] != 1305 && $items[$i]['id'] != 1303 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631 && $items[$i]['id'] != 12631) { ?>
+										<a href="index.php?p=category&a=delete&id=<?= $child_items_2[$k]['id'] ?>&page=<?= @$_GET['page'] ?>" onClick="if(!confirm('Xác nhận xóa?')) return false;" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
+									<?php } ?>
 								</td>
 							</tr>
 							<!-- cap 3 -->
