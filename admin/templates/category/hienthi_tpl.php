@@ -127,7 +127,7 @@
 					?>
 						<tr>
 							<td>
-								<?php if ($items[$i]['id'] != 1299) { ?>
+								<?php if ($items[$j]['id'] != 1299) { ?>
 									<input type="checkbox" class="chk_box" name="chk_child[]" value="<?= $child_items[$j]['id'] ?>">
 								<?php } ?>
 							</td>
@@ -166,7 +166,7 @@
 
 								<a href="index.php?p=category&a=edit&id=<?= $child_items[$j]['id'] ?>&page=<?= @$_GET['page'] ?>" class="text-danger" title="Sửa"><i class="glyphicon glyphicon-edit"></i></a>&nbsp;&nbsp;&nbsp;
 
-								<?php if ($items[$i]['id'] != 1299) { ?>
+								<?php if ($items[$j]['id'] != 1299) { ?>
 									<a href="index.php?p=category&a=delete&id=<?= $child_items[$j]['id'] ?>&page=<?= @$_GET['page'] ?>" onClick="if(!confirm('Xác nhận xóa?')) return false;" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
 								<?php } ?>
 							</td>
