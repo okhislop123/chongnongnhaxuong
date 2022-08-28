@@ -111,7 +111,7 @@ $bg = $d->getTemplates(60);
                         </div>
 
                         <?php foreach ($loai2 as $k => $value) {
-                            $tintuc2 = $d->o_fet("select * from #_tintuc where hien_thi = 1 and id_loai = " . $loai["id"] . " order by so_thu_tu asc, id desc");
+                            $tintuc2 = $d->o_fet("select * from #_tintuc where hien_thi = 1 and id_loai = " . $value["id"] . " order by so_thu_tu asc, id desc");
                         ?>
                             <div class="lo test <?= !$k ? "active" : "" ?>" data-id="<?= $value['id'] ?>">
                                 <div class="item__cs__ba">
