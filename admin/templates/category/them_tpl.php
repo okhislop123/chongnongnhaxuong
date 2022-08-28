@@ -220,7 +220,7 @@
 										Nội dung(ja):
 									</td>
 									<td class="td_right">
-										<textarea class="input width400 form-control" style="height:80px" name="noi_dung_us" id="noi_dung_ch"><?= @$items[0]['noi_dung_ch'] ?></textarea>
+										<textarea class="input width400 form-control" style="height:80px" name="noi_dung_ch" id="noi_dung_ch"><?= @$items[0]['noi_dung_ch'] ?></textarea>
 										<?php $ckeditor->replace('noi_dung_ch'); ?>
 									</td>
 								</tr>
