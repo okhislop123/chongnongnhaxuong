@@ -58,7 +58,7 @@
 			<th style="width:40%; text-align:left">Danh mục</th>
 			<th style="width:8%">Hình ảnh</th>
 			<th style="width:8%">Module</th>
-			<th style="width:8%">Col-3</th>
+			<th style="width:8%">Hiển thị khác</th>
 			<th style="width:8%">Danh mục</th>
 			<!-- <th style="width:8%">Top Menu</th> -->
 			<th style="width:8%">Hiển thị</th>
