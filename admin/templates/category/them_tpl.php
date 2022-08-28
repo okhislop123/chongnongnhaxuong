@@ -215,6 +215,15 @@
 										<?php $ckeditor->replace('mo_ta_ch'); ?>
 									</td>
 								</tr>
+								<tr>
+									<td class="td_left">
+										Nội dung(ja):
+									</td>
+									<td class="td_right">
+										<textarea class="input width400 form-control" style="height:80px" name="noi_dung_us" id="noi_dung_ch"><?= @$items[0]['noi_dung_ch'] ?></textarea>
+										<?php $ckeditor->replace('noi_dung_ch'); ?>
+									</td>
+								</tr>
 								<!--tr>
 					<td class="td_left">
 						Nội dung chân trang (ch):
