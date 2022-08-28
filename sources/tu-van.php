@@ -23,17 +23,23 @@ $bg = $d->getTemplates(60);
 </div>
 <br><br>
 
-
-
-<section class="project">
+<div class="container__item">
     <div class="item__cs__a">
         <?= $loai["mo_ta_" . $lang] ?>
         <?= $loai["noi_dung_" . $lang] ?>
     </div>
-    <?php if (count($loai1)) { ?>
+</div>
+<?php if (count($loai1)) { ?>
+    <section class="project">
+        <div class="project__side__left">
+            <div class="content">
+                <h3><?= $loai['ten_' . $lang] ?></h3>
+            </div>
+        </div>
+
         <div class="project__side__right">
             <div class="content">
-                <?php foreach ($project__list as $key => $item) { ?>
+                <?php foreach ($loai1 as $key => $item) { ?>
                     <div class="item">
                         <h1><a href="<?= URLPATH . $item['alias_' . $lang] . '.html' ?>"><?= $item['ten_' . $lang] ?></a></h1>
                         <img src="<?= URLPATH . 'img_data/images/' . $item['hinh_anh'] ?>" alt="<?= $item['ten_' . $lang] ?>">
@@ -41,5 +47,5 @@ $bg = $d->getTemplates(60);
                 <?php } ?>
             </div>
         </div>
-    <?php } ?>
-</section>
+    </section>
+<?php } ?>
