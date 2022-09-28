@@ -46,7 +46,7 @@ $bg = $d->getTemplates(60);
     ?>
         <img class="bg_img" src="<?= URLPATH . 'img_data/images/' . $loai['hinh_anh'] ?>" alt="picture">
     <?php  } ?>
-    <?php echo $tintuc['mo_ta_' . $lang]; ?>
+    <!-- <?php echo $tintuc['mo_ta_' . $lang]; ?> -->
     <?php echo $tintuc['noi-dung_' . $lang]; ?>
 </div>
 
