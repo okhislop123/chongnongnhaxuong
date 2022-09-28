@@ -127,6 +127,8 @@ function luudulieu()
 		$data['khuyen_mai'] = $d->clear(addslashes($_POST['khuyen_mai']));
 
 		$data['thong_tin_vn'] = $d->clear(addslashes($_POST['thong_tin_vn']));
+		$data['thong_tin_us'] = $d->clear(addslashes($_POST['thong_tin_us']));
+		$data['thong_tin_ch'] = $d->clear(addslashes($_POST['thong_tin_ch']));
 		$data['thong_so_vn'] = $d->clear(addslashes($_POST['thong_so_vn']));
 		$data['video'] = $d->clear(addslashes($_POST['video']));
 		$data['doc'] = $d->clear(addslashes($_POST['doc']));
@@ -208,6 +210,8 @@ function luudulieu()
 		$data['extra0'] = addslashes($_POST['extra0']);
 		$data['thong_tin_vn'] = $d->clear(addslashes($_POST['thong_tin_vn']));
 		$data['thong_so_vn'] = $d->clear(addslashes($_POST['thong_so_vn']));
+		$data['thong_tin_us'] = $d->clear(addslashes($_POST['thong_tin_us']));
+		$data['thong_tin_ch'] = $d->clear(addslashes($_POST['thong_tin_ch']));
 		$data['video'] = $d->clear(addslashes($_POST['video']));
 		$data['doc'] = $d->clear(addslashes($_POST['doc']));
 

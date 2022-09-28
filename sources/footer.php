@@ -16,12 +16,12 @@ $listchamsoc = $d->o_fet("select * from #_category where id_loai=1278 and hien_t
 $thongtinft = $d->simple_fetch("select * from #_thongtin limit 0,1");
 $hotro = $d->simple_fetch("select * from #_hotro limit 0,1");
 $category_ft = $d->simple_fetch("select * from #_category where id = 1305");
-$project__list = $d->o_fet("select * from #_tintuc where id_loai = 1305 and noi_bat = 1 order by so_thu_tu asc, id desc limit 0,10");
+$project__list = $nav  = $d->o_fet("select * from #_category where tieu_bieu=1 and hien_thi=1  order by so_thu_tu asc, id desc");
 
 ?>
 <footer class="<?= $com = '' ? 'home' : 'nothome' ?>">
 
-    <div class="container__item">
+    <div class="container__item_2">
         <div class="row">
             <div class="col-xs-12">
                 <div class="logo__ft">
@@ -56,7 +56,7 @@ $project__list = $d->o_fet("select * from #_tintuc where id_loai = 1305 and noi_
             <div class="col-md-3 col-sm-6 ">
                 <h4 class="title-f"><?= $category_ft["ten_" . $lang] ?></h4>
                 <ul class="ftmenu">
-                    <li><a href="<?= URLPATH ?>"><?=_trangchu?></a></li>
+                    <!-- <li><a href="<?= URLPATH ?>"><?= _trangchu ?></a></li> -->
                     <?php foreach ($project__list as $key => $item) { ?>
                         <li><a href="<?= URLPATH . $item['alias_' . $lang] . '.html' ?>"><?= $item['ten_' . $lang] ?></a></li>
                     <?php } ?>
@@ -64,12 +64,13 @@ $project__list = $d->o_fet("select * from #_tintuc where id_loai = 1305 and noi_
             </div>
 
             <div class="col-md-4 col-sm-6 ">
-                <h4 class="title-f"><?=_contac_us?></h4>
+                <h4 class="title-f"><?= _contac_us ?></h4>
                 <form action="" id="frm_send">
-                    <input type="text" placeholder="<?=_hoten?> *" id="ft_name_ip">
-                    <input type="text" placeholder="<?=_email?> *" id="ft_email_ip">
-                    <textarea placeholder="<?=_content?>" name="" id="ft_ms_ip" cols="30" rows="10"></textarea>
-                    <button type="button"><?=_send?></button>
+                    <input type="text" placeholder="<?= _hoten ?> *" id="ft_name_ip">
+                    <input type="text" placeholder="<?= _email ?> *" id="ft_email_ip">
+                    <input type="text" placeholder="<?= _sodienthoai ?> *" id="ft_phone_ip">
+                    <textarea placeholder="<?= _content ?>" name="" id="ft_ms_ip" cols="30" rows="10"></textarea>
+                    <button type="button"><?= _send ?></button>
                 </form>
             </div>
 
@@ -100,6 +101,33 @@ $project__list = $d->o_fet("select * from #_tintuc where id_loai = 1305 and noi_
 <?php //include 'module/call_to_action1.php';
 ?>
 <div id="fb-root"></div>
+<div id="fb-customer-chat" class="fb-customerchat"></div>
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "113212195947714");
+    chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml: true,
+            version: 'v14.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
 <?php if ($lang == 'vn') { ?>
     <script>
         (function(d, s, id) {

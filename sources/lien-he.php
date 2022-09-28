@@ -8,15 +8,15 @@ $textfooter = $d->getTemplates(53);
 
 
 if (isset($_POST['sub_email'])) {
-    $chuoi1 = strtolower($_SESSION['captcha_code']);
-    $chuoi2 = strtolower($_POST['captcha']);
-    if ($chuoi1 == $chuoi2) {
+    // $chuoi1 = strtolower($_SESSION['captcha_code']);
+    // $chuoi2 = strtolower($_POST['captcha']);
+    // if ($chuoi1 == $chuoi2) {
         $d->reset();
         $data['ho_ten'] = addslashes($_POST['ho_ten']);
         $data['email'] = addslashes($_POST['email']);
         $data['sdt'] = addslashes($_POST['so_dien_thoai']);
         $data['noi_dung'] = addslashes($_POST['noi_dung']);
-        $data['dia_chi'] = addslashes($_POST['dia_chi']);
+        // $data['dia_chi'] = addslashes($_POST['dia_chi']);
         $data['ngay_hoi'] = date('d-m-Y H:i:s');
         $data['trang_thai'] = '0';
         $data['tieu_de'] = "Liên hệ";
@@ -25,7 +25,7 @@ if (isset($_POST['sub_email'])) {
         $noidung = "<div style='margin-bottom:5px;'>Bạn nhận được tin nhắn từ website: " . URLPATH . " : </div>";
         $noidung .= "<div style='margin-bottom:5px;'>Thông tin: </div>";
         $noidung .= "<div style='margin-bottom:5px;'>Họ tên: " . $_POST['ho_ten'] . "</div>";
-        $noidung .= "<div style='margin-bottom:5px;'>Địa chỉ: " . $_POST['dia_chi'] . "</div>";
+        // $noidung .= "<div style='margin-bottom:5px;'>Địa chỉ: " . $_POST['dia_chi'] . "</div>";
         $noidung .= "<div style='margin-bottom:5px;'>Số điện thoại: " . $_POST['so_dien_thoai'] . "</div>";
         $noidung .= "<div style='margin-bottom:5px;'>Email: " . $_POST['mail'] . "</div>";
         // $noidung .= "<div style='margin-bottom:5px;'>Tiêu đề: ".$_POST['tieu_de']."</div>";
@@ -40,9 +40,10 @@ if (isset($_POST['sub_email'])) {
         } else {
             $d->alert("Error!");
         }
-    } else {
-        $d->alert("Security code is incorrect");
-    }
+    // } 
+    // else {
+    //     $d->alert("Security code is incorrect");
+    // }
 }
 $dulieu = $d->getTemplates(10);
 $bg = $d->getTemplates(60);
@@ -147,7 +148,7 @@ $loai = $d->simple_fetch("select * from #_category where hien_thi = 1 and alias_
                 <form id="form-contact" method="post">
                     <div class="col-12">
                         <div class="form-group">
-                            <input type="text" id="ho_ten" required name="ho_ten" class="form-control" placeholder="Name (*)">
+                            <input type="text" id="ho_ten" required name="ho_ten" class="form-control" placeholder="<?= _hoten ?> (*)">
                         </div>
                         <div class="form-group">
                             <input type="text" id="so_dien_thoai" required name="so_dien_thoai" class="form-control" placeholder="<?= _sodienthoai ?>(*)">
@@ -156,7 +157,7 @@ $loai = $d->simple_fetch("select * from #_category where hien_thi = 1 and alias_
                         <input type="text" id="dia_chi" name="dia_chi" class="form-control" placeholder="Address">
                     </div> -->
                         <div class="form-group">
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Email ">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="<?= _email ?> ">
                         </div>
                         <!-- <div class="form-group">
                         <input type="text" id="so_dien_thoai" required name="so_dien_thoai" class="form-control" placeholder="Phone  (*)">
@@ -164,13 +165,13 @@ $loai = $d->simple_fetch("select * from #_category where hien_thi = 1 and alias_
                     </div>
                     <div class="col-12">
                         <div class="textarea-message form-group">
-                            <textarea class="form-control" name="noi_dung" placeholder="<?= ($lang == 'vn') ? 'Content ' : 'Content ' ?>" rows="6"></textarea>
+                            <textarea class="form-control" name="noi_dung" placeholder="<?= _content ?>" rows="6"></textarea>
                         </div>
                         <div class="form-group item-captcha">
                             <div class="row">
-                                <div class="col-sm-12">
-                                    <input type="text" required class="form-control" placeholder="<?= ($lang == 'vn') ? 'Enter the security code' : 'Enter the security code' ?>" id="captcha" name="captcha" style="background: url(./sources/capchaimage.php) center right no-repeat">
-                                </div>
+                                <!-- <div class="col-sm-12">
+                                    <input type="text" required class="form-control" placeholder="<?= _captcha ?>" id="captcha" name="captcha" style="background: url(./sources/capchaimage.php) center right no-repeat">
+                                </div> -->
                                 <div class="col-sm-12">
                                     <button class="form-control btn btn-success btn-send-contact " style="margin-top:15px" name="sub_email" type="submit"><?= _send ?>
                                         <i class="fa fa-paper-plane"></i>

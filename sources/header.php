@@ -62,7 +62,7 @@ $lang = $_SESSION['lang'];
                 <form method="get" action="index.php" class="navbar-form navbar-right" id="frm3">
                     <input type="hidden" name="com" value="search">
                     <div class="uk-search uk-search-large">
-                        <input autofocus class="uk-search-input uk-text-center form-control" type="text" name="textsearch" placeholder="Nhập nội dung tìm kiếm ...">
+                        <input autofocus class="uk-search-input uk-text-center form-control" type="text" name="textsearch" placeholder="<?=_enter_content_search?> ...">
                     </div>
                     <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
                     <i onclick="handleShowSearch()" class="fa fa-times" aria-hidden="true"></i>

@@ -150,9 +150,9 @@ $nhasanxuat = $d->o_fet("select * from #_extra where type = 1 order by stt asc")
 				<li role="presentation" class="">
 					<a href="#id_us" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Ngôn ngữ EN</a>
 				</li>
-				<!--li role="presentation" class="">
-			<a href="#id_ch" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Ngôn ngữ Japan</a>
-		</li-->
+				<li role="presentation" class="">
+					<a href="#id_ch" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Ngôn ngữ Japan</a>
+				</li>
 				<li role="presentation" class="">
 					<a href="#id_seo" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Hỗ trợ SEO</a>
 				</li>

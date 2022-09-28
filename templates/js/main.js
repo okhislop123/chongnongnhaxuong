@@ -594,7 +594,7 @@ $('.group-congtrinh').slick({
 $('#frm_send button').click(function (event) {
   event.preventDefault();
   var ten = $('#ft_name_ip').val();
-  var dienthoai = $('#txtsdt').val();
+  var dienthoai = $('#ft_phone_ip').val();
   var email = $('#ft_email_ip').val();
   var loinhan = $('#ft_ms_ip').val();
   var err = '';
@@ -604,9 +604,9 @@ $('#frm_send button').click(function (event) {
   if (em.test(email) == false) {
     err = 'Email không hợp lệ';
   }
-  // if (!vnf_regex.test(dienthoai)) {
-  //   err = 'Số điện thoại không hợp lệ';
-  // }
+  if (!vnf_regex.test(dienthoai)) {
+    err = 'Số điện thoại không hợp lệ';
+  }
   if (ten.length < 1) {
     err = 'Chưa nhập tên';
   }
@@ -623,7 +623,7 @@ $('#frm_send button').click(function (event) {
       data: {
         do: 'dkda',
         ten: ten,
-        dienthoai: "",
+        dienthoai:dienthoai,
         email: email,
         loinhan: loinhan,
 

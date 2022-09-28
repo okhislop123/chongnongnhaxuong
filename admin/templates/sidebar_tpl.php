@@ -219,7 +219,7 @@
                     </ul>
                 </li>
             <?php } ?>
-            <!-- <?php if ($d->checkChildPermission($_SESSION['id_user'], 'seo-website') > 0 || (int)$_SESSION['is_admin'] == 1) { ?>
+            <?php if ($d->checkChildPermission($_SESSION['id_user'], 'seo-website') > 0 || (int)$_SESSION['is_admin'] == 1) { ?>
                 <li class="list-group-item <?php if ($_GET['p'] == 'ho-tro-truc-tuyen' || $_GET['p'] == 'seo-co-ban' || $_GET['p'] == 'seo-nang-cao' || $_GET['p'] == 'lien-ket-doi-tac') echo "active" ?>">
                     <a href="#"><i class="glyphicon glyphicon-list-alt"></i> <span>SEO Website</span> <i class="caret"></i></a>
                     <ul class="list-group">
@@ -239,7 +239,7 @@
                         <?php } ?>
                     </ul>
                 </li>
-            <?php } ?> -->
+            <?php } ?>
             <?php if ($d->checkChildPermission($_SESSION['id_user'], 'cau-hinh-user') > 0 || (int)$_SESSION['is_admin'] == 1) { ?>
                 <li class="list-group-item <?php if ($_GET['p'] == 'ql-user' || $_GET['p'] == 'permission' || $_GET['p'] == 'ql-user') echo "active" ?>">
                     <a href="#"><i class="glyphicon glyphicon-user"></i> <span>Cấu Hình User <i class="caret"></i></span></a>

@@ -5084,6 +5084,7 @@ section.project {
   transition: 0.8s;
   opacity: 0;
   visibility: hidden;
+  text-align: center;
 }
 
 .project__side__right .content .item img {
@@ -5379,7 +5380,8 @@ h3.prodcut-name {
 }
 
 .mota {
-  font-family: svn;
+  font-family: 'Roboto';
+  font-size: 14px;
 }
 
 .noidung-tt > div > a {
@@ -5449,7 +5451,7 @@ h3.prodcut-name {
   border: 1px solid #ccc;
 }
 .noidung-tt h3 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .noidung-tt > div > a {
@@ -5536,4 +5538,8 @@ span.ytdl-handle-btn {
 .header-tag2>div>div {
   display: flex;
   align-items: center;
+}
+
+.lo.test {
+  margin-bottom: 20px;
 }
