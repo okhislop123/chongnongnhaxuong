@@ -22,7 +22,7 @@ $bg = $d->getTemplates(60);
                 <ol vocab="https://schema.org/" typeof="BreadcrumbList" class="breadcrumb">
                     <li property="itemListElement" typeof="ListItem">
                         <a property="item" typeof="WebPage" href="<?= URLPATH ?>">
-                            <span property="name"><?=_trangchu?></span>
+                            <span property="name"><?= _trangchu ?></span>
                         </a>
                         <meta property="position" content="1">
                     </li>
@@ -46,8 +46,11 @@ $bg = $d->getTemplates(60);
     ?>
         <img class="bg_img" src="<?= URLPATH . 'img_data/images/' . $loai['hinh_anh'] ?>" alt="picture">
     <?php  } ?>
-    <!-- <?php echo $tintuc['mo_ta_' . $lang]; ?> -->
-    <?php echo $tintuc['noi_dung_' . $lang]; ?>
+    <div class="container__item">
+        <!-- <?php echo $tintuc['mo_ta_' . $lang]; ?> -->
+        <?php echo $tintuc['noi_dung_' . $lang]; ?>
+    </div>
+
 </div>
 
 <!-- <div class="container">
