@@ -26,11 +26,11 @@ foreach ($nav as $item) {
             if (count($sub1) > 0) {
                 $menusub2 = "";
                 foreach ($sub1 as $key1 => $item2) {
-                    $menusub2 .= '<li><a href="' . URLPATH . $item2['alias_' . $lang] . '.html?lan=' . $lang . '" title="' . $item2['ten_' . $lang] . '">' . $item2['ten_' . $lang] . '</a></li>';
+                    $menusub2 .= '<li><a href="' . URLPATH . $item2['alias_' . $lang] . '.html" title="' . $item2['ten_' . $lang] . '">' . $item2['ten_' . $lang] . '</a></li>';
                 }
                 $menusub .= '
                         <li  class="sub-nav">
-                            <a href="' . URLPATH . $item1['alias_' . $lang] . '.html?lan=' . $lang . '" title="' . $item1['ten_' . $lang] . '">' . $item1['ten_' . $lang] . ' <span class="caret"></span></a>
+                            <a href="' . URLPATH . $item1['alias_' . $lang] . '.html" title="' . $item1['ten_' . $lang] . '">' . $item1['ten_' . $lang] . ' <span class="caret"></span></a>
                             <ul>' . $menusub2 . '</ul>
                         </li>';
             } else {

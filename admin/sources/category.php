@@ -274,4 +274,3 @@ function xoadulieu_mang(){
 		else $d->transfer("Xóa dữ liệu bị lỗi", "index.php?p=category&a=man");
 	}else $d->redirect("index.php?p=category&a=man&page=".@$_REQUEST['page']."");
 }
-?>
