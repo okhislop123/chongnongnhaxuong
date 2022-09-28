@@ -66,14 +66,14 @@ $bg = $d->getTemplates(60);
                                         <div class="row itemdetailnew3">
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="img-tintuc">
-                                                    <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html?lan=<?= $lang ?>" title="<?= $item['ten_' . $lang] ?>">
+                                                    <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html" title="<?= $item['ten_' . $lang] ?>">
                                                         <img src="<?= URLPATH ?>thumb.php?src=<?= URLPATH ?>img_data/images/<?= $item['hinh_anh'] ?>&w=730&h=400" alt="<?= $item['ten_' . $lang] ?>" onerror="this.src='<?= URLPATH ?>templates/error/error.jpg';">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="noidung-tt">
-                                                    <h3><a href="<?= URLPATH . $item['alias_' . $lang] ?>.html?lan=<?= $lang ?>" title="$item['ten_'.$lang] ?>"><?= $item['ten_' . $lang] ?></a></h3>
+                                                    <h3><a href="<?= URLPATH . $item['alias_' . $lang] ?>.html" title="$item['ten_'.$lang] ?>"><?= $item['ten_' . $lang] ?></a></h3>
                                                     <div class="mota">
                                                         <?= $d->catchuoi_new(strip_tags($item['mo_ta_' . $lang]), 350) ?>
                                                     </div>
@@ -123,12 +123,12 @@ $bg = $d->getTemplates(60);
                                                     <div class=" itemdetailnew5">
                                                         <div class="col-12">
                                                             <div class="img-tintuc_2">
-                                                                <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html?lan=<?= $lang ?>" title="<?= $item['ten_' . $lang] ?>">
+                                                                <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html" title="<?= $item['ten_' . $lang] ?>">
                                                                     <img src="<?= URLPATH ?>thumb.php?src=<?= URLPATH ?>img_data/images/<?= $item['hinh_anh'] ?>&w=730&h=400" alt="<?= $item['ten_' . $lang] ?>" onerror="this.src='<?= URLPATH ?>templates/error/error.jpg';">
                                                                 </a>
                                                                 <div class="mota__ctv3">
                                                                     <div class="groupvxa">
-                                                                        <h3 style="margin: 0;color:orange"><a style="color: orange;" href="<?= URLPATH . $item['alias_' . $lang] ?>.html?lan=<?= $lang ?>" title="$item['ten_'.$lang] ?>"><?= $item['ten_' . $lang] ?></a></h3>
+                                                                        <h3 style="margin: 0;color:orange"><a style="color: orange;" href="<?= URLPATH . $item['alias_' . $lang] ?>.html" title="$item['ten_'.$lang] ?>"><?= $item['ten_' . $lang] ?></a></h3>
 
                                                                         <img src="<?= URLPATH . 'templates/images/proj-line.png' ?>" alt="line">
 
@@ -167,12 +167,12 @@ $bg = $d->getTemplates(60);
                                         <div class=" itemdetailnew5">
                                             <div class="col-12">
                                                 <div class="img-tintuc_2">
-                                                    <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html?lan=<?= $lang ?>" title="<?= $item['ten_' . $lang] ?>">
+                                                    <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html" title="<?= $item['ten_' . $lang] ?>">
                                                         <img src="<?= URLPATH ?>thumb.php?src=<?= URLPATH ?>img_data/images/<?= $item['hinh_anh'] ?>&w=730&h=400" alt="<?= $item['ten_' . $lang] ?>" onerror="this.src='<?= URLPATH ?>templates/error/error.jpg';">
                                                     </a>
                                                     <div class="mota__ctv3">
                                                         <div class="groupvxa">
-                                                            <h3 style="margin: 0;color:orange"><a style="color: orange;" href="<?= URLPATH . $item['alias_' . $lang] ?>.html?lan=<?= $lang ?>" title="$item['ten_'.$lang] ?>"><?= $item['ten_' . $lang] ?></a></h3>
+                                                            <h3 style="margin: 0;color:orange"><a style="color: orange;" href="<?= URLPATH . $item['alias_' . $lang] ?>.html" title="$item['ten_'.$lang] ?>"><?= $item['ten_' . $lang] ?></a></h3>
 
                                                             <img src="<?= URLPATH . 'templates/images/proj-line.png' ?>" alt="line">
 
