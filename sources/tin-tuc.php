@@ -67,7 +67,7 @@ $bg = $d->getTemplates(60);
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="img-tintuc">
                                                     <a href="<?= URLPATH . $item['alias_' . $lang] ?>.html" title="<?= $item['ten_' . $lang] ?>">
-                                                        <img src="<?= URLPATH ?>thumb.php?src=<?= URLPATH ?>img_data/images/<?= $item['hinh_anh'] ?>&w=730&h=400" alt="<?= $item['ten_' . $lang] ?>" onerror="this.src='<?= URLPATH ?>templates/error/error.jpg';">
+                                                        <img src="<?= URLPATH ?>img_data/images/<?= $item['hinh_anh'] ?>" alt="<?= $item['ten_' . $lang] ?>" onerror="this.src='<?= URLPATH ?>templates/error/error.jpg';">
                                                     </a>
                                                 </div>
                                             </div>
